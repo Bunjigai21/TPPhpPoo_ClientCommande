@@ -1,12 +1,10 @@
 <?php
-
-class AutoLoader {
-  static function register(){
-    spl_autoload_register(array(__CLASS__, 'autoLoad'));
+class AutoLoader
+{
+  static function Register(){
+    spl_autoload_register(array(__CLASS__, 'AutoLoad'));
   }
-
-  static function autoLoad($class_name){
-    require 'classes/' . $class_name . '.php';
-
+  static function AutoLoad($class_name){
+    require 'classes/' . $class_name .  '.php';
   }
-}?>
+}

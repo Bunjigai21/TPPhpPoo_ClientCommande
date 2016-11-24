@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html>
-    <head>  
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
-    </head>
-    <?php
-    try {
 
-        include_once("AutoLoader.php");
-        AutoLoader::register();
-        require_once('trait/iMetier.php');
-        ?>
-    <body>
-        <?php 
-        $cliRepo = new ClientRepository();
-        print_r($cliRepo ->findById(1,'Client')); ?>
-       
-    </body>
-    <?php
-    } catch (Exception $ex) {
-        echo $ex->getMessage();
-    }
-    ?>
-    </body>
-    
-</html>
+<html>
+
+	<head>
+		<title>PHPPOO2</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<?php
+
+
+			// Autoload de toutes les classes
+			require 'autoloader.php';
+			require_once 'interfaces\iRepository.php';
+			AutoLoader::register();
+
+	
+			$cliRepo = new ClientRepository();
+
+			echo $cliRepo->findById(1);
+			
+		?>
+	</body>
+
+</hmtl>

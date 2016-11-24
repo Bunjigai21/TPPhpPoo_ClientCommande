@@ -1,7 +1,8 @@
 <?php
 
-	class CommandeRepository{
-		use traitRepository;
+	class ClientRepository{
 
+		use tRepository;
 		
+
 	}

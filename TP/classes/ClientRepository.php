@@ -1,7 +1,17 @@
 <?php
-class ClientRepository{
-    use traitRepository;
 
-    
-    
-  }
+	class ClientRepository extends AbstractRepository{
+
+		
+
+		public function __construct(){
+
+			$this->classe = 'client';
+		
+		}
+
+
+
+
+		
+	}

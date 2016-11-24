@@ -1,8 +1,7 @@
 <?php
 
-	class Client{
-		use ClientRepository;
-		
+	class Client {
+
 		private $id;
 		private $titre;
 		private $nom;
@@ -13,5 +12,9 @@
 		private $ville;
 		private $tel;
 		private $lesCommandes;
+
+		public function __toString(){
+			return "nom : " . $this->nom . " prenom : " . $this->prenom;
+		}
+		
 	}
-	?>
