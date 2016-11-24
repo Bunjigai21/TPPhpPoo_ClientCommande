@@ -6,7 +6,7 @@ class AutoLoader {
   }
 
   static function autoLoad($class_name){
-    require 'DIRNAME/' . $class_name . '.php';
+    require 'classes/' . $class_name . '.php';
 
   }
 }?>

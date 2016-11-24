@@ -1,6 +1,8 @@
 <?php
 
 	class Client{
+		use ClientRepository;
+		
 		private $id;
 		private $titre;
 		private $nom;
