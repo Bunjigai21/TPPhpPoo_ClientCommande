@@ -5,13 +5,13 @@
 		
 
 		public function __construct(){
-
+			parent::__construct();
 			$this->classe = 'client';
-		
 		}
+		findByCp($unCp){
 
-
-
-
-		
+		}
+		findByVille($uneVille){
+			
+		}
 	}

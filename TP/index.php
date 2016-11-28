@@ -8,20 +8,42 @@
 	</head>
 
 	<body>
-		<?php
 
+
+		<?php
 
 			// Autoload de toutes les classes
 			require 'autoloader.php';
-			require_once 'interfaces\iRepository.php';
 			AutoLoader::register();
 
 	
-			$cliRepo = new ClientRepository();
 
-			echo $cliRepo->findById(1);
+				// TEST POUR LES FINDBYID
+				$cliRepo = new ClientRepository();
+				//echo $cliRepo->findById(1);
+
+				echo '<br>';
+
+				$comRepo = new CommandeRepository();
+				//echo $comRepo->findById(1); 
+
+				echo '<br>';
+
+
+				//TEST POUR LES FINDALL
+				$allRepo = new ClientRepository();
+				//print_r($allRepo->findAll()); 
+
+				$allCommande = new CommandeRepository();
+				//print_r($allCommande->findAll()); 
+
+
+			
+
 			
 		?>
+
+
 	</body>
 
 </hmtl>

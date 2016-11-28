@@ -1,8 +1,18 @@
 <?php
 
-	class ClientRepository{
+	class CommandeRepository extends AbstractRepository{
 
-		use tRepository;
 		
 
+		public function __construct(){
+			parent::__construct();
+			$this->classe = 'commande';
+		
+		}
+		findByDate($uneDate){
+
+		}
+		findByIntervalleDate($dateDepart,$dateFin){
+
+		}
 	}

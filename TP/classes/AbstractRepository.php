@@ -1,16 +1,40 @@
 <?php
 	
+
+
 	abstract class AbstractRepository{
 
 		protected $classe;
+		private $bdd;
+
+		public function __construct(){
+			$this->bdd = new Bdd();
+		}
 
 		public function findById($id){
 
-			$bdd = new Bdd();
-			$req = $bdd->requeteSQL('SELECT * FROM ' . $this->classe . ' WHERE ID=?', array($id));
+			$req = $this->bdd->requeteSQL('SELECT * FROM ' . $this->classe . ' WHERE ID=?', array($id));
 
-			return $req->fetchObject('Client');
+			return $req->fetchObject($this->classe);
 
 		}
-		
+
+		public function findAll(){
+
+			$req = $this->bdd->requeteSQL('SELECT * FROM ' . $this->classe);
+			$clients = array();
+
+			while($data = $req->fetchObject($this->classe)){
+				$clients[] = $data;
+			}
+
+			return $clients;
+
+		}
+
+		public function insert($objet){
+
+			$req = $this->bdd->requeteSQL('INSERT INTO ' . $this->classe . ' (TITRE, NOM, PRENOM, ADRESSERUE1, ADRESSERUE2, CP, VILLE, TEL) VALUE (:titre, :nom, :prenom, :adresserue1, :adresserue2, :cp, :ville, :tel)',array($objet->ID,$objet->NOM,$objet->PRENOM,$objet->ADRESSERUE1,$objet->ADRESSERUE2,$objet->CP,$objet->VILLE,$objet->TEL));
+		}
+
 	}
