@@ -8,10 +8,10 @@
 			parent::__construct();
 			$this->classe = 'client';
 		}
-		findByCp($unCp){
+		public function findByCp($unCp){
 
 		}
-		findByVille($uneVille){
+		public function findByVille($uneVille){
 			
 		}
 	}

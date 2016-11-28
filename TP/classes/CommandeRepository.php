@@ -9,10 +9,10 @@
 			$this->classe = 'commande';
 		
 		}
-		findByDate($uneDate){
+		public function findByDate($uneDate){
 
 		}
-		findByIntervalleDate($dateDepart,$dateFin){
+		public function findByIntervalleDate($dateDepart,$dateFin){
 
 		}
 	}

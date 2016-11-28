@@ -32,9 +32,9 @@
 
 		}
 
-		public function insert($objet){
+		public function insert($objet, $params){
 
-			$req = $this->bdd->requeteSQL('INSERT INTO ' . $this->classe . ' (TITRE, NOM, PRENOM, ADRESSERUE1, ADRESSERUE2, CP, VILLE, TEL) VALUE (:titre, :nom, :prenom, :adresserue1, :adresserue2, :cp, :ville, :tel)',array($objet->ID,$objet->NOM,$objet->PRENOM,$objet->ADRESSERUE1,$objet->ADRESSERUE2,$objet->CP,$objet->VILLE,$objet->TEL));
+			$req = $this->bdd->requeteSQL('INSERT INTO ' . $this->classe . ' (ID, TITRE, NOM, PRENOM, ADRESSERUE1, ADRESSERUE2, CP, VILLE, TEL) VALUE (null,?, ?, ?, ?, ?, ?, ?, ?)',$params);
 		}
 
 	}

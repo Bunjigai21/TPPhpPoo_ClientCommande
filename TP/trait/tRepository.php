@@ -38,10 +38,10 @@
 
 		}
 
-		public function insert($objet){
+		//public function insert($objet){
 
 
 
-		}
+		//}
 		
 	}

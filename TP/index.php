@@ -20,7 +20,8 @@
 
 				// TEST POUR LES FINDBYID
 				$cliRepo = new ClientRepository();
-				//echo $cliRepo->findById(1);
+				$client = $cliRepo->findById(1);
+				insert($cliRepo);
 
 				echo '<br>';
 
@@ -36,11 +37,7 @@
 
 				$allCommande = new CommandeRepository();
 				//print_r($allCommande->findAll()); 
-
-
-			
-
-			
+		
 		?>
 
 
